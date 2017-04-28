@@ -1,0 +1,13 @@
+<h1>Welcome to Message Board</h1>
+
+<p>Ask a question and find the answer here!</p>
+
+<ul>
+  {{#each model as |message|}}
+     <li>User: {{message.user}}<br>Question: {{message.question}}<br> Answer: {{message.answer}}</li>
+     <hr>
+  {{/each}}
+</ul>
+
+{{#link-to 'about'}}About{{/link-to}}
+{{#link-to 'contact'}}Click here to contact us.{{/link-to}}
