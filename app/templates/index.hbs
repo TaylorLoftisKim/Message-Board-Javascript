@@ -4,8 +4,7 @@
 
 <ul>
   {{#each model as |message|}}
-     <li>User: {{message.user}}<br>Question: {{message.question}}</li>
-     <hr>
+    {{message-tile message=message}}
   {{/each}}
 </ul>
 
