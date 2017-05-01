@@ -1,12 +1,18 @@
-<h1>Welcome to Message Board</h1>
+<div class="container">
+  <div class="jumbotron">
+    <h1>Welcome to Message Board</h1>
+    <p>Ask a question and find the answer here!</p>
+  </div>
 
-<p>Ask a question and find the answer here!</p>
+  <div class="well">
+    <ul>
+      {{#each model as |message|}}
+      {{message-tile message=message destroyMessage="destroyMessage"}}
+      {{/each}}
+    </ul>
 
-<ul>
-  {{#each model as |message|}}
-    {{message-tile message=message}}
-  {{/each}}
-</ul>
+    {{#link-to 'about'}}About{{/link-to}}
+    {{#link-to 'contact'}}Click here to contact us.{{/link-to}}
 
-{{#link-to 'about'}}About{{/link-to}}
-{{#link-to 'contact'}}Click here to contact us.{{/link-to}}
+  </div>
+</div>
