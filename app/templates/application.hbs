@@ -1,5 +1,19 @@
-{{!-- The following component displays Ember's default welcome message. --}}
-{{welcome-page}}
-{{!-- Feel free to remove this! --}}
-
+<div>
+  <nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="btn navbar-brand">
+          <span class="glyphicon glyphicon-align-left" aria-hidden="true"></span>
+        </button>
+        <a class="navbar-brand active" href="/">Programmer Answers</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li ><a href="/">Home</a></li>
+        <li>{{#link-to 'about'}}About Us{{/link-to}}</li>
+        <li>{{#link-to 'contact'}}Contact{{/link-to}}</li>
+        <li>{{#link-to new-message saveMessage="saveMessage"}}Post A Question{{/link-to}}</li>
+      </ul>
+    </div>
+  </nav>
+</div>
 {{outlet}}

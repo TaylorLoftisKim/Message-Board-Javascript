@@ -1,0 +1,20 @@
+{{#if addNewMessage}}
+  <h1>Create a New Question</h1>
+  <div>
+    <form>
+      <div class="form-group">
+        <label for="user">User Name:</label>
+        {{input value=user id="user"}}
+      </div>
+
+      <div class="form-group">
+        <label for="question">Question:</label>
+        {{input value=question id="question"}}
+      </div>
+
+      <button {{action 'saveMessage'}}>Post Question</button>
+    </form>
+  </div>
+{{else}}
+  <button {{action 'messageFormShow'}}>New Message</button>
+{{/if}}

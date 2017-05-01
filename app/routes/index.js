@@ -9,6 +9,11 @@ export default Ember.Route.extend({
     destroyMessage(message) {
       message.destroyRecord();
       this.transitionTo('index');
+    },
+    saveMessage(params) {
+      var newMessage = this.store.createRecord('message', params);
+      newMessage.save();
+      this.transitionTo('index');
     }
   }
 });

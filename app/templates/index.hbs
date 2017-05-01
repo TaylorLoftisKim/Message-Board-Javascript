@@ -10,9 +10,11 @@
       {{message-tile message=message destroyMessage="destroyMessage"}}
       {{/each}}
     </ul>
+    <div style='float: right;'>
+      {{new-message saveMessage="saveMessage"}}
 
-    {{#link-to 'about'}}About{{/link-to}}
-    {{#link-to 'contact'}}Click here to contact us.{{/link-to}}
+    </div>
+
 
   </div>
 </div>
