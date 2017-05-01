@@ -1,20 +1,20 @@
 <div class="container">
   <div class="jumbotron">
-    <h1>Welcome to Message Board</h1>
-    <p>Ask a question and find the answer here!</p>
+    <h1 class="header">Welcome to Message Board</h1>
+    <hr>
+    <p class="header">Ask a question and find the answer here!</p>
   </div>
-
+  <div class="newMessageBtn"style='float: center;'>
+    {{new-message saveMessage="saveMessage"}}
+  </div>
+  <br>
   <div class="well">
+    <h1 class="topicsHeader">Topics</h1>
+    <hr>
     <ul>
       {{#each model as |message|}}
       {{message-tile message=message destroyMessage="destroyMessage"}}
       {{/each}}
     </ul>
-    <div style='float: right;'>
-      {{new-message saveMessage="saveMessage"}}
-
-    </div>
-
-
   </div>
 </div>

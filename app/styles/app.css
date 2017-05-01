@@ -1,3 +1,15 @@
 body {
   background-color: tan;
 }
+
+.topicsHeader {
+  text-align: center;
+}
+
+.header {
+  text-align: center;
+}
+
+.newMessageBtn {
+  text-align: center;
+}

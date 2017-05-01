@@ -1,7 +1,12 @@
 <li>
-  User: {{message.user}}<br>
-  Question: {{message.question}}
+  <h3><strong>User: </strong>{{message.user}}</h3>
+  <h3><strong>Question: </strong>{{message.question}}</h3>
+  <div style='float: right;'>
+    <div class="btn-group">
+      <button type="button" class="btn btn-primary">Comment</button>
+      <button type="button" {{action 'delete' message}} class="btn btn-danger">Delete</button>
+    </div>
+  </div>
   <br>
-  <button {{action 'delete' message}}>Delete Message</button>
-  <br><br>
+  <hr>
 </li>
