@@ -12,9 +12,18 @@
     <h1 class="topicsHeader">Topics</h1>
     <hr>
     <ul>
-      {{#each model as |message|}}
+      {{#each model.messages as |message|}}
       {{message-tile message=message destroyMessage="destroyMessage"}}
       {{/each}}
     </ul>
+    <h2>All Reviews</h2>
+    <ul>
+      {{#each model.comments as |comment|}}
+    <li>{{comment.user}} - {{comment.content}}</li>
+      {{/each}}
+    </ul>
+  </div>
+  <div class="newMessageBtn"style='float: center;'>
+    {{new-comment saveComment="saveComment"}}
   </div>
 </div>

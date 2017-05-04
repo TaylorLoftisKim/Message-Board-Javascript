@@ -7,5 +7,12 @@
   }, {
     "user": "Brian",
     "question": "How do I install packages on Atom?"
+  }],
+  "comments": [{
+    "user": "Mike",
+    "content": "Go find the proper install syntax and type it into terminal!"
+  }, {
+    "user": "Alex",
+    "content": "Not sure."
   }]
 }
