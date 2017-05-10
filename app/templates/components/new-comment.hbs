@@ -11,10 +11,10 @@
           <label for="content">Content:</label>
           {{input value=content id="content"}}
         </div>
-        <button {{action 'saveComment'}}>Post Comment</button>
+        <button type="submit" {{action 'saveComment'}}>Post Comment</button>
       </form>
     </div>
   </div>
-  {{else}}
-    <button {{action 'commentFormShow'}}>New Comment</button>
+{{else}}
+  <button {{action 'commentFormShow'}}>New Comment</button>
 {{/if}}

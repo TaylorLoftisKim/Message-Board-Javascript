@@ -10,14 +10,8 @@ export default Ember.Component.extend({
         this.sendAction('destroyMessage', message);
       }
     },
-    saveComment() {
-      var params = {
-        user: this.get('user'),
-        content: this.get('content')
-      };
-        this.set('addNewComment', false);
+    saveComment(params) {
         this.sendAction('saveComment', params);
       }
-
   }
 });

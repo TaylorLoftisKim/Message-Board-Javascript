@@ -7,7 +7,6 @@ export default Ember.Route.extend({
       comments: this.store.findAll('comment')
     });
   },
-
   actions: {
     update(message, params) {
       Object.keys(params).forEach(function(key) {
@@ -18,15 +17,18 @@ export default Ember.Route.extend({
       message.save();
       this.transitionTo('index');
     },
+
     destroyMessage(message) {
       message.destroyRecord();
       this.transitionTo('index');
     },
+
     saveMessage(params) {
       var newMessage = this.store.createRecord('message', params);
       newMessage.save();
       this.transitionTo('index');
     },
+
     saveComment(params) {
       var newComment = this.store.createRecord('comment', params);
       newComment.save();
