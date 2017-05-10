@@ -6,7 +6,6 @@ export default Ember.Component.extend({
     messageFormShow() {
       this.set('addNewMessage', true);
     },
-    
     saveMessage() {
       var params = {
         user: this.get('user'),
