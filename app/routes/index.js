@@ -9,6 +9,15 @@ export default Ember.Route.extend({
   },
 
   actions: {
+    update(message, params) {
+      Object.keys(params).forEach(function(key) {
+        if(params[key]!==undefined) {
+          message.set(key,params[key]);
+        }
+      });
+      message.save();
+      this.transitionTo('index');
+    },
     destroyMessage(message) {
       message.destroyRecord();
       this.transitionTo('index');
@@ -18,18 +27,5 @@ export default Ember.Route.extend({
       newMessage.save();
       this.transitionTo('index');
     },
-    update(model, params) {
-      Object.keys(params).forEach(function(key) {
-        if(params[key]!==undefined) {
-          model.set(key,params[key]);
-        }
-      });
-      model.save();
-    },
-    saveComment(params) {
-      var newComment = this.store.createRecord('comment', params);
-      newComment.save();
-      this.transitionTo('index');
-    }
   }
 });

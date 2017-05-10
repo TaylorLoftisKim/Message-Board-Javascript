@@ -6,13 +6,13 @@ export default Ember.Component.extend({
     updateMessageForm() {
       this.set('updateMessageForm', true);
     },
-    update(model) {
+    update(message) {
       var params = {
         user: this.get('user'),
         question: this.get('question'),
       };
       this.set('updateMessageForm', false);
-      this.sendAction('update', model, params);
+      this.sendAction('update', message, params);
     }
   }
 });

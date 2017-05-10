@@ -4,29 +4,33 @@
     <hr>
     <p class="header">Ask a question and find the answer here!</p>
   </div>
-  <div class="newMessageBtn"style='float: center;'>
-    {{new-message saveMessage="saveMessage"}}
+  <div class="jumbotron">
+    <h2 class="header">Make a New Post here!</h2>
+    <div class="newMessageBtn"style='float: center;'>
+      {{new-message saveMessage="saveMessage" message=model}}
+    </div>
   </div>
   <br>
   <div class="well">
     <h1 class="topicsHeader">Topics</h1>
-    <hr>
-    <ul>
-      {{#each model.messages as |message|}}
-      {{message-tile message=message destroyMessage="destroyMessage"}}
-      {{/each}}
-    </ul>
-    <h2 class="header">Comment Thread</h2>
+      <hr>
+        <ul>
+          {{#each model.messages as |message|}}
+          {{message-tile message=message destroyMessage="destroyMessage"}}
+          {{/each}}
+        </ul>
+        <ul>
+          {{#each model.comments as |comment|}}
+            {{comment-tile comment=comment}}
+          {{/each}}
+        </ul>
+      <h2 class="header">Comment Thread</h2>
     <p class="header">*Replies are listed responding to their corrosponding topic*</p>
     <hr>
-    <ul>
-      {{#each model.comments as |comment|}}
-    <li>{{comment.user}} - {{comment.content}}</li>
-      {{/each}}
-    </ul>
-  </div>
-
-  <div class="newMessageBtn"style='float: center;'>
-    {{new-comment saveComment="saveComment"}}
+      <ul>
+        {{#each model.comments as |comment|}}
+      <li>{{comment.user}} - {{comment.content}}</li>
+        {{/each}}
+      </ul>
   </div>
 </div>

@@ -3,16 +3,20 @@
   <h3><strong>Question: </strong>{{message.question}}</h3>
   <div style='float: right;'>
     <div class="btn-group">
-      {{new-comment saveComment="saveComment" message=model}}
       {{update-message message=message update="update"}}
       <button type="button" {{action 'delete' message}} class="btn btn-danger">Delete</button>
     </div>
   </div>
   <h2> Comments: </h2>
-<ul>
+  <ul>
   {{#each message.comments as |comment|}}
     {{comment-tile comment=comment}}
   {{/each}}
+</ul>
+<ul>
+  <div class="newMessageBtn"style='float: center;'>
+    {{new-comment saveComment='saveComment' message=model comment='comment'}}
+  </div>
 </ul>
   <br>
   <hr>
