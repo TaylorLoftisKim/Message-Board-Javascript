@@ -10,7 +10,6 @@ export default Ember.Route.extend({
 
   actions: {
     update(message, params) {
-      debugger;
       Object.keys(params).forEach(function(key) {
         if(params[key]!==undefined) {
           message.set(key,params[key]);
@@ -28,5 +27,10 @@ export default Ember.Route.extend({
       newMessage.save();
       this.transitionTo('index');
     },
+    saveComment(params) {
+      var newComment = this.store.createRecord('comment', params);
+      newComment.save();
+      this.transitionTo('index');
+    }
   }
 });

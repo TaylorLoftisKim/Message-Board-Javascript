@@ -1,1 +1,5 @@
-{{yield}}
+<ul>
+  {{#each message.comments as |comment|}}
+    {{comment-tile comment=comment}}
+  {{/each}}
+</ul>

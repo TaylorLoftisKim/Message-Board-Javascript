@@ -5,7 +5,7 @@
     <p class="header">Ask a question and find the answer here!</p>
   </div>
   <div class="jumbotron">
-    <h2 class="header">Make a New Post here!</h2>
+    <h2 class="header">Make a New Post!</h2>
     <div class="newMessageBtn"style='float: center;'>
       {{new-message saveMessage="saveMessage" message=model}}
     </div>
@@ -17,6 +17,11 @@
       <ul>
         {{#each model.messages as |message|}}
           {{message-tile message=message destroyMessage="destroyMessage" update="update"}}
+        {{/each}}
+      </ul>
+      <ul>
+        {{#each model.comments as |comment|}}
+          {{comment-tile comment=comment destroyMessage="destroyMessage" update="update"}}
         {{/each}}
       </ul>
   </div>
