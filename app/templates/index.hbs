@@ -11,11 +11,13 @@
     </div>
   </div>
   <br>
-  <div class="jumbotron">
-    <ul>
-      {{#each model.messages as |message|}}
-      {{message-tile message=message}}
-      {{/each}}
-    </ul>
+  <div class="well">
+    <h1 class="topicsHeader">Topics</h1>
+      <hr>
+      <ul>
+        {{#each model.messages as |message|}}
+          {{message-tile message=message destroyMessage="destroyMessage" update="update"}}
+        {{/each}}
+      </ul>
   </div>
 </div>
