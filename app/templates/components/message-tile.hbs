@@ -4,6 +4,7 @@
   <div style='float: right;'>
     <div class="btn-group">
       {{new-comment saveComment="saveComment" message=model}}
+      {{update-message message=message update="update"}}
       <button type="button" {{action 'delete' message}} class="btn btn-danger">Delete</button>
     </div>
   </div>

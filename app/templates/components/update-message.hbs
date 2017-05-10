@@ -1,0 +1,18 @@
+{{#if updateMessageForm}}
+<h4>Update Topic</h4>
+<div class="">
+  <form>
+    <div class="form-group">
+      <label for="user">User</label>
+      {{input value=user id="user" placeholder=model.user}}
+    </div>
+    <div class="form-group">
+      <label for="question">Question</label>
+      {{input value=question id="question" placeholder=model.question}}
+    </div>
+    <button class="btn"{{action 'update' model}}>Save</button>
+  </form>
+</div>
+{{else}}
+<button class="btn"{{action 'updateMessageForm'}}>Update</button>
+{{/if}}
