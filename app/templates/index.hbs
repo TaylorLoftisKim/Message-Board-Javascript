@@ -16,14 +16,16 @@
       {{message-tile message=message destroyMessage="destroyMessage"}}
       {{/each}}
     </ul>
-    <h2>All Reviews</h2>
+    <h2 class="header">Comment Thread</h2>
+    <p class="header">*Replys are listed responding to their corrosponding topic*</p>
+    <hr>
     <ul>
       {{#each model.comments as |comment|}}
     <li>{{comment.user}} - {{comment.content}}</li>
       {{/each}}
     </ul>
   </div>
-  
+
   <div class="newMessageBtn"style='float: center;'>
     {{new-comment saveComment="saveComment"}}
   </div>

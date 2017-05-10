@@ -3,7 +3,7 @@
   <h3><strong>Question: </strong>{{message.question}}</h3>
   <div style='float: right;'>
     <div class="btn-group">
-      {{new-comment saveComment="saveComment"}}
+      {{new-comment saveComment="saveComment" message=model}}
       <button type="button" {{action 'delete' message}} class="btn btn-danger">Delete</button>
     </div>
   </div>
