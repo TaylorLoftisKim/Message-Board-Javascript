@@ -7,7 +7,7 @@
       <button type="button" {{action 'delete' message}} class="btn btn-danger">Delete</button>
     </div>
   </div>
-  <h2> Comments: </h2>
+  <h2>Comments: </h2>
   <ul>
   {{#each message.comments as |comment|}}
     {{comment-tile comment=comment}}

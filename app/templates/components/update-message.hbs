@@ -1,18 +1,18 @@
 {{#if updateMessageForm}}
-<h4>Update {{message.user}}: {{message.question}}</h4>
-<div>
-  <form>
-    <div class="form-group">
-      <label for="user">User:</label>
-      {{input value=user id="user" placeholder=model.user}}
+  <h4>Update {{message.user}}: {{message.question}}</h4>
+    <div>
+      <form>
+        <div class="form-group">
+          <label for="user">User:</label>
+          {{input value=user id="user" placeholder=model.user}}
+        </div>
+        <div class="form-group">
+          <label for="question">Question:</label>
+          {{input value=question id="question" placeholder=model.question}}
+        </div>
+        <button class="btn"{{action 'update' message}}>Save</button>
+      </form>
     </div>
-    <div class="form-group">
-      <label for="question">Question:</label>
-      {{input value=question id="question" placeholder=model.question}}
-    </div>
-    <button class="btn"{{action 'update' message}}>Save</button>
-  </form>
-</div>
 {{else}}
-<button class="btn"{{action 'updateMessageForm'}}>Update</button>
+  <button class="btn"{{action 'updateMessageForm'}}>Update</button>
 {{/if}}
